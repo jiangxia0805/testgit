@@ -35,6 +35,7 @@ if($res){
 }else{
     echo "下载失败";
 }
+//测试 git 原创推送不输入密码
 
 ///2.转换成对象（页面简单的不需要转换，直接用content的内容进行处理）
 //$html = str_get_html($content);
