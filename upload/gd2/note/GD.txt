@@ -1,0 +1,158 @@
+﻿一、绘制图形
+       点
+       imagesetpixel(resrource $img,int $x,int $y,
+                                 int $color)
+       功能：画点
+       参数：
+        img 生成画布时申请的资源
+        x,y   坐标
+        color 点的颜色
+
+        线
+        imageline(resource $img,int $x1,int $y1,
+                           int $x2,int $y2,int $color)
+         功能：画线 
+         参数：
+         img 创建画布时申请的资源
+         x1,y1 线的起点的坐标
+         x2,y2 线的终点的坐标
+         color 线的颜色
+
+         矩形
+         imagerectangle(resource $img,
+                                     int $x1,int $y1,
+                                     int $x2,int $y2,
+                                     int $color )
+         功能：矩形
+         参数：
+         img 申请的画布资源
+         x1,y1 矩形在画布上的起点坐标
+         x2,y2 矩形在画布上的终点坐标 
+         color  矩形边框的颜色
+
+
+         imagefilledrectangle(resource $img,
+                                     int $x1,int $y1,
+                                     int $x2,int $y2,
+                                     int $color )
+          imageellipse(resource $img,int $x,int $y,
+                                 int $width,int $height,
+                                 int $color) 
+          功能：
+          画圆
+          参数：
+          img 申请的画布资源
+          x，y  圆心点的坐标
+          width，heigh 圆的宽和高
+          color   圆的边框的颜色
+
+          imagefilledellipse(resource $img,
+                                          int $x,int y,
+                                          int $width,int $height,
+                                          int $color) 
+           功能：画实心的圆
+
+           imagestring(resource $img,int $font,
+                                 int $x,int $y,string $s,
+                                 int $color)
+           功能：输出文字
+           参数：
+           img 申请的画布资源
+           font 字体大小（1~5）1 最小，5 最大
+           x,y   字的起点位置
+           s       输出的文字
+           color 字体的颜色
+
+           imagettftext(resource $img,
+                                   int $font,float $angle,
+                                   int $x,int $y,
+                                   int $color,string $ttffile,
+                                   string $s)
+          功能：输出文字
+          参数：
+           img  申请的画布资源
+           font 文字的大小。 C:\WINDOWS\Fonts
+           angle 角度，水平是0度，逆时针旋转。
+           x,y     文字的起点坐标
+           color  文字的颜色
+           ttffile 字体文件的名字
+           s         输出的文字
+ 
+
+验证码
+鉴别机器和人。目的：安全。
+验证码制作的步骤
+1、画布
+2、文字
+3、干扰
+4、输出
+5、清理
+
+应用不同的图片作为背景
+imagecreatefrom图片的格式（string $filename）
+imagecreatefromgif(string $filename)
+imagecreatefromjpeg(string $filename)
+imagecreatefrompng(string $filename)
+功能：从现有图片上获取图片资源
+参数：
+filename 图片文件的名称
+注意：图片文件的名称也就是图片的格式，决定了函数的名称。
+返回：图片资源
+
+水印功能
+文字水印
+在现有图片上写文字
+
+getimagesize(string $filename)
+功能：获取图片文件的描述信息
+参数：
+filename 图片文件的名称
+返回：格式　数组
+　　　０　宽
+　　　１　高
+　　　２　图片类型（１=>gif　２=>jpeg　３=>png）
+
+imagefontwidth(int $font)　
+功能：获取字符的宽度　　
+参数：
+font （1~5）
+返回：字符的宽度
+
+imagefontheight(int $font)　
+功能：获取字符的高度　　
+参数：
+font （1~5）
+返回：字符的高度　　　　　　　
+
+
+
+图片水印
+
+           
+ 
+
+
+
+
+
+
+
+
+
+习题：
+１、做一个300*300的绿色背景的画布。在画布的正中间画一个红色的点。
+2、 在上一题的绿色画布上，画一个十字交叉的图形，要求线颜色为红色。
+3、 在上一题的画布上画一个实心的圆。
+4、在上一题创建的画布上输出文字：hello world
+5、试着在上一题创建的画布上输出中文：你好。
+6、验证码
+     将验证码放入到html页面中。
+７、在现有图片上画一条横线。
+     
+
+
+
+
+
+
+        

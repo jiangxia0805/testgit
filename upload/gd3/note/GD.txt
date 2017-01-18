@@ -1,0 +1,70 @@
+﻿GD
+图片水印
+imagecopy(resource $des_img,resource $src_img,
+                     int $des_x,int $des_y,
+                     int $src_x,int  $src_y,
+                     int $src_w,int $src_h)
+功能：将一两张图片合并为一张图片
+参数：
+des_img  大图的资源
+src_img   小图的资源
+des_x,des_y 小图贴在大图上的坐标
+src_x,src_y   小图片开始剪切的起始坐标（0,0）
+src_w,src_h  小图片的宽和高
+
+图片的剪切和缩放
+imagecopyresampled(resource $des_img,
+                                       resource $src_img,
+                                       int $des_x,int $des_y,
+                                       int $src_x,int $src_y,
+                                       int $des_w,int $des_h,
+                                       int $src_w,int $src_h)
+功能：图片的剪切和缩放
+参数：
+des_img 缩放后的图片资源
+src_img  原图片资源
+des_x,des_y  缩放后（小图）图片的坐标（0,0）
+src_x,src_y    原图准备缩放的起始点，如果是缩放则此点坐标
+                      （0,0）
+des_w,des_h 缩放后图片的宽和高
+src_w,src_h   原图片的宽和高
+
+图片的翻转和旋转
+翻转：
+imagecopy
+详见例题
+沿y轴
+imagecopy（$des_img,$src_img,$width-($i+1),0,$i,0,1,$height）
+沿x轴
+imagecopy($des_img,$src_img,0,$des_y,0,$i, $width,1);
+
+旋转
+imagerotate(resource $img,int $angle,int $bgcolor)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
